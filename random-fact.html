@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Random Fact About Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Random Fact About Me</h1>
+    <p class="page-subtitle">Get to know me better through fun facts</p>
+  </div>
+
+  <div class="section">
+    <div class="random-fact-wrapper">
+      <div class="fact-icon">✨</div>
+      <div class="random-fact-container">
+        <div class="fact-header">
+          <span class="fact-label">Did you know?</span>
+        </div>
+        <div class="random-fact" id="random-fact">
+          <p class="fact-text" id="fact-text">Loading...</p>
+        </div>
+        <button class="btn-fact" id="new-fact-btn">
+          <span class="btn-icon">🎲</span>
+          <span>Another Fact</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="side-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="resume.html" class="nav-link">Resume</a>
+  <a href="products.html" class="nav-link">Things I've Built</a>
+  <a href="random-fact.html" class="nav-link active">Random Fact</a>
+</nav>
+
+<nav class="mobile-nav">
+  <a href="index.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">🏠</span>
+    <span class="mobile-nav-text">Home</span>
+  </a>
+  <a href="resume.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">📄</span>
+    <span class="mobile-nav-text">Resume</span>
+  </a>
+  <a href="products.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">🔨</span>
+    <span class="mobile-nav-text">Built</span>
+  </a>
+  <a href="random-fact.html" class="mobile-nav-link active">
+    <span class="mobile-nav-icon">✨</span>
+    <span class="mobile-nav-text">Fact</span>
+  </a>
+</nav>
+
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+  // Setup random fact for this page
+  if (typeof setupRandomFact === 'function') {
+    setupRandomFact();
+  } else {
+    // Fallback if function not loaded yet
+    setTimeout(() => {
+      if (typeof setupRandomFact === 'function') {
+        setupRandomFact();
+      }
+    }, 100);
+  }
+</script>
+</body>
+</html>

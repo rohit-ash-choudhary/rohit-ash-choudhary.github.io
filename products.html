@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Things I've Built</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Things I've Built</h1>
+    <p class="page-subtitle">Tools and products I've built that people use daily</p>
+  </div>
+
+  <div class="section" id="products-section">
+    <!-- Products will be loaded from config.js -->
+  </div>
+</div>
+
+<nav class="side-nav">
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="resume.html" class="nav-link">Resume</a>
+  <a href="products.html" class="nav-link active">Things I've Built</a>
+  <a href="random-fact.html" class="nav-link">Random Fact</a>
+</nav>
+
+<nav class="mobile-nav">
+  <a href="index.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">🏠</span>
+    <span class="mobile-nav-text">Home</span>
+  </a>
+  <a href="resume.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">📄</span>
+    <span class="mobile-nav-text">Resume</span>
+  </a>
+  <a href="products.html" class="mobile-nav-link active">
+    <span class="mobile-nav-icon">🔨</span>
+    <span class="mobile-nav-text">Built</span>
+  </a>
+  <a href="random-fact.html" class="mobile-nav-link">
+    <span class="mobile-nav-icon">✨</span>
+    <span class="mobile-nav-text">Fact</span>
+  </a>
+</nav>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+<script>
+  // Load products from config
+  function loadProducts() {
+    if (typeof CONFIG !== 'undefined' && CONFIG.products) {
+      const productsSection = document.getElementById('products-section');
+      productsSection.innerHTML = '';
+
+      if (CONFIG.products.length === 0) {
+        productsSection.innerHTML = '<p style="text-align: center; color: #71717a; padding: 40px;">No products available yet.</p>';
+        return;
+      }
+
+      CONFIG.products.forEach((product) => {
+        const item = document.createElement('div');
+        item.className = 'item project-item';
+        item.innerHTML = `
+          <div class="project-header">
+            <h3>${product.name}</h3>
+            ${product.link && product.link !== '#' ? `<a href="${product.link}" target="_blank" class="project-link">${product.status === 'live' ? 'Try it →' : product.status === 'under-review' ? 'Under Review' : 'Coming soon'}</a>` : ''}
+          </div>
+          <p>${product.description}</p>
+          <div class="tech-tags">
+            ${product.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+          </div>
+          ${product.status ? `<span class="project-category">${product.status === 'live' ? '🚀 Live' : product.status === 'under-review' ? '⏳ Under Review' : '🔜 Coming Soon'}</span>` : ''}
+        `;
+        productsSection.appendChild(item);
+      });
+    }
+  }
+
+  // Load products on page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadProducts);
+  } else {
+    loadProducts();
+  }
+</script>
+</body>
+</html>
