@@ -44,11 +44,11 @@ const CONFIG = {
   
   products: [
     {
-      name: "TimeGuard",
+      name: "TimeGuard – Daily Limits",
       description: "A Chrome extension that helps you set daily time limits on websites. Track your browsing habits, get reminders when you hit your limits, and stay focused. Built to solve my own problem of spending too much time on distracting sites.",
       tech: ["JavaScript", "Chrome Extension API", "Local Storage"],
-      link: "#",
-      status: "under-review"
+      link: "https://chromewebstore.google.com/detail/timeguard-%E2%80%93-daily-limits/lhinglchdahkkhdnfjbfnaafckbdbkpm?hl=en-US&utm_source=ext_sidebar",
+      status: "live"
     },
     {
       name: "FutureMe",
