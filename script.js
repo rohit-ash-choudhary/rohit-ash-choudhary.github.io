@@ -38,8 +38,9 @@ function updatePageContent() {
   // Update hero subtitle with skills
   const heroSubtitle = document.getElementById('hero-subtitle');
   if (heroSubtitle && CONFIG.skills) {
-    // Show title + first 5 skills (Java, Spring Boot, Kafka, AWS, and one more)
-    heroSubtitle.textContent = `${CONFIG.title} · ${CONFIG.skills.slice(0, 5).join(' · ')}`;
+    // Show title + specific skills: Java, Spring Boot, AI, Kafka, AWS, Oracle, DevOps
+    const displaySkills = ["Java", "Spring Boot", "AI", "Kafka", "AWS", "Oracle", "DevOps"];
+    heroSubtitle.textContent = `${CONFIG.title} · ${displaySkills.join(' · ')}`;
   }
 
   // Note: Hero title is now hardcoded in HTML with highlights, so we don't update it here

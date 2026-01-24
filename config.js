@@ -6,7 +6,7 @@ const CONFIG = {
   title: "Backend Engineer",
   tagline: "I build backend systems that scale, fail safely, and stay clean.",
   bio: "I build products from scratch. Not just backend code, but full systems that people actually use. I think about what users need, design things that scale, and ship features that solve real problems. If it doesn't work when it matters, it's not good enough. When I'm not building, I travel, listen to music, and write poems. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.",
-  skills: ["Java", "Spring Boot", "Kafka", "AWS", "Oracle", "PostgreSQL", "Microservices", "Docker", "REST API"],
+  skills: ["Java", "Spring Boot","AI", "Kafka", "AWS", "Oracle", "PostgreSQL", "Microservices", "DevOps", "REST API"],
   
   skillsDetailed: {
     programming: ["Java", "Python", "SQL", "NumPy", "Pandas", "Seaborn", "Matplotlib"],
@@ -51,7 +51,7 @@ const CONFIG = {
       status: "live"
     },
     {
-      name: "FutureMe",
+      name: "FUTOROO - Messages for Who You'll Be",
       description: "Send messages to your future self. Write notes, set goals, or reminders that get delivered to you on a specific date. A simple tool for reflection and planning ahead.",
       tech: ["JavaScript", "Node.js", "Email API"],
       link: "#",
