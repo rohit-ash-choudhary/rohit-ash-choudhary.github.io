@@ -44,18 +44,25 @@ const CONFIG = {
   
   products: [
     {
-      name: "TimeGuard – Daily Limits",
-      description: "A Chrome extension that helps you set daily time limits on websites. Track your browsing habits, get reminders when you hit your limits, and stay focused. Built to solve my own problem of spending too much time on distracting sites.",
-      tech: ["JavaScript", "Chrome Extension API", "Local Storage"],
-      link: "https://chromewebstore.google.com/detail/timeguard-%E2%80%93-daily-limits/lhinglchdahkkhdnfjbfnaafckbdbkpm?hl=en-US&utm_source=ext_sidebar",
-      status: "live"
-    },
-    {
       name: "FUTOROO - Messages for Who You'll Be",
       description: "Send messages to your future self. Write notes, set goals, or reminders that get delivered to you on a specific date. A simple tool for reflection and planning ahead.",
       tech: ["JavaScript", "Node.js", "Email API"],
       link: "#",
       status: "coming-soon"
+    },
+    {
+      name: "FocusGate - Distraction Lock",
+      description: "Block all websites except 5 allowed sites for a set time period to help you stay focused. A productivity browser extension that helps you stay focused by blocking all websites except up to 5 allowed websites for a set time period. You can use this to focus on any task—whether studying, working, or doing any other productive activity.",
+      tech: ["JavaScript", "Chrome Extension API", "Local Storage"],
+      link: "https://chromewebstore.google.com/detail/focusgate-distraction-loc/lkiclebelnfobmhpcdkhknjlbppolpma?authuser=0&hl=en",
+      status: "live"
+    },
+    {
+      name: "TimeGuard – Daily Limits",
+      description: "A Chrome extension that helps you set daily time limits on websites. Track your browsing habits, get reminders when you hit your limits, and stay focused. Built to solve my own problem of spending too much time on distracting sites.",
+      tech: ["JavaScript", "Chrome Extension API", "Local Storage"],
+      link: "https://chromewebstore.google.com/detail/timeguard-%E2%80%93-daily-limits/lhinglchdahkkhdnfjbfnaafckbdbkpm?hl=en-US&utm_source=ext_sidebar",
+      status: "live"
     }
   ],
 
