@@ -44,11 +44,11 @@ const CONFIG = {
   
   products: [
     {
-      name: "FUTOROO - Messages for Who You'll Be",
-      description: "Send messages to your future self. Write notes, set goals, or reminders that get delivered to you on a specific date. A simple tool for reflection and planning ahead.",
-      tech: ["JavaScript", "Node.js", "Email API"],
-      link: "#",
-      status: "coming-soon"
+      name: "LaterMe - Schedule Messages for Your Future Self",
+      description: "A message scheduling service that lets you send messages to your future self. Write notes, set goals, or reminders that get delivered to you on a specific date. Built with Spring Boot backend featuring scheduled task execution for reliable message delivery. A simple yet powerful tool for reflection and planning ahead.",
+      tech: ["Spring Boot", "Spring Scheduler", "Java", "Backend API", "Scheduled Tasks"],
+      link: "https://laterme.pages.dev/",
+      status: "live"
     },
     {
       name: "FocusGate - Distraction Lock",
