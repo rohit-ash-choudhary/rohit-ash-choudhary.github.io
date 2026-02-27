@@ -11,8 +11,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var s = localStorage.getItem('portfolio-theme');
+      if (s === 'light') document.documentElement.classList.add('light-mode');
+      else if (s === 'dark') document.documentElement.classList.remove('light-mode');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.classList.add('light-mode');
+    })();
+  </script>
 </head>
 <body>
+
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+  <span class="icon-moon" aria-hidden="true">🌙</span>
+  <span class="icon-sun" aria-hidden="true">☀️</span>
+</button>
 
 <div class="container">
   <div class="page-header">

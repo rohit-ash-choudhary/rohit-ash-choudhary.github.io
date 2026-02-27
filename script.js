@@ -1,5 +1,8 @@
 // Load configuration and update page content
 document.addEventListener('DOMContentLoaded', function() {
+  // Apply saved theme (before paint to avoid flash)
+  initTheme();
+
   // Wait for config to load
   if (typeof CONFIG !== 'undefined') {
     updatePageContent();
@@ -22,9 +25,43 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
   }
 
+  // Setup theme toggle button
+  setupThemeToggle();
+
   // Setup scroll animations
   setupScrollAnimations();
 });
+
+function initTheme() {
+  var saved = localStorage.getItem('portfolio-theme');
+  if (saved === 'light') {
+    document.body.classList.add('light-mode');
+    document.documentElement.classList.add('light-mode');
+  } else if (saved === 'dark') {
+    document.body.classList.remove('light-mode');
+    document.documentElement.classList.remove('light-mode');
+  } else {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      document.body.classList.add('light-mode');
+      document.documentElement.classList.add('light-mode');
+      localStorage.setItem('portfolio-theme', 'light');
+    } else {
+      document.body.classList.remove('light-mode');
+      document.documentElement.classList.remove('light-mode');
+    }
+  }
+}
+
+function setupThemeToggle() {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    document.body.classList.toggle('light-mode');
+    document.documentElement.classList.toggle('light-mode');
+    var isLight = document.body.classList.contains('light-mode');
+    localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
+  });
+}
 
 function updatePageContent() {
   // Update page title

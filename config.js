@@ -5,14 +5,14 @@ const CONFIG = {
   name: "Rohit Ash Choudhary",
   title: "Backend Engineer",
   tagline: "I build backend systems that scale, fail safely, and stay clean.",
-  bio: "I build products from scratch. Not just backend code, but full systems that people actually use. I think about what users need, design things that scale, and ship features that solve real problems. If it doesn't work when it matters, it's not good enough. When I'm not building, I travel, listen to music, and write poems. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.",
-  skills: ["Java", "Spring Boot","AI", "Kafka", "AWS", "Oracle", "PostgreSQL", "Microservices", "DevOps", "REST API"],
+  bio: "I build products from scratch. Not just backend code, but full systems that people actually use. I think about what users need, design things that scale, and ship features that solve real problems. If it doesn't work when it matters, it's not good enough. When I'm not building, I travel, listen to music, and write lyrics. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.",
+  skills: ["Java", "Spring Boot", "AI", "Kafka", "AWS", "Oracle", "PostgreSQL", "Microservices", "DevOps", "REST API", "MCP", "RAG", "Vector DB", "MLOps", "Deep Work"],
   
   skillsDetailed: {
     programming: ["Java", "Python", "SQL", "NumPy", "Pandas", "Seaborn", "Matplotlib"],
     frameworks: ["Spring Boot", "Spring Cloud", "Hibernate", "JPA", "Microservices", "API Gateway", "Service Discovery", "JSP", "Servlet"],
     applicationServers: ["WebLogic", "Wild-Fly", "Apache Tomcat"],
-    tools: ["Docker", "Git", "JUnit", "Mockito", "Apache Kafka", "AI Engineer", "Prompt Engineer"],
+    tools: ["Docker", "Git", "JUnit", "Mockito", "Apache Kafka", "AI Engineer", "Prompt Engineer", "MCP", "RAG", "Vector DB", "MLOps"],
     databases: ["Oracle", "MySQL", "MongoDB", "Cassandra"],
     cloudDevOps: ["AWS", "Linux", "Windows", "Unix"]
   },
@@ -48,6 +48,13 @@ const CONFIG = {
       description: "A message scheduling service that lets you send messages to your future self. Write notes, set goals, or reminders that get delivered to you on a specific date. Built with Spring Boot backend featuring scheduled task execution for reliable message delivery. A simple yet powerful tool for reflection and planning ahead.",
       tech: ["Spring Boot", "Spring Scheduler", "Java", "Backend API", "Scheduled Tasks"],
       link: "https://laterme.pages.dev/",
+      status: "live"
+    },
+    {
+      name: "Deep Work - Category-Wise Focus",
+      description: "A focus tool for deep work organized by categories. Stay in flow by focusing on one category at a time—work, study, creative, or custom. Built for sustained deep focus with clear category boundaries so you can go deep without context-switching.",
+      tech: ["JavaScript", "Chrome Extension API", "Local Storage", "Productivity"],
+      link: "#",
       status: "live"
     },
     {

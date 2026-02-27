@@ -11,8 +11,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="stylesheet" href="style.css">
+  <script>
+    (function() {
+      var s = localStorage.getItem('portfolio-theme');
+      if (s === 'light') document.documentElement.classList.add('light-mode');
+      else if (s === 'dark') document.documentElement.classList.remove('light-mode');
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.classList.add('light-mode');
+    })();
+  </script>
 </head>
 <body>
+
+<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+  <span class="icon-moon" aria-hidden="true">🌙</span>
+  <span class="icon-sun" aria-hidden="true">☀️</span>
+</button>
 
 <section class="hero container">
   <div class="hero-content">
@@ -34,7 +47,7 @@
     </p>
     <div class="bio-text" id="bio-text">
       <p>I build products from scratch. Not just backend code, but full systems that people actually use. I think about what users need, design things that scale, and ship features that solve real problems. If it doesn't work when it matters, it's not good enough.</p>
-      <p>When I'm not building, I travel, listen to music, and write poems. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.</p>
+      <p>When I'm not building, I travel, listen to music, and write lyrics. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.</p>
     </div>
     <div class="hero-social" id="hero-social">
       <!-- Social links loaded from config -->
