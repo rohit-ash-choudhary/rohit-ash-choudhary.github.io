@@ -51,9 +51,9 @@ const CONFIG = {
       status: "live"
     },
     {
-      name: "Deep Work - Category-Wise Focus",
-      description: "A focus tool for deep work organized by categories. Stay in flow by focusing on one category at a time—work, study, creative, or custom. Built for sustained deep focus with clear category boundaries so you can go deep without context-switching.",
-      tech: ["JavaScript", "Chrome Extension API", "Local Storage", "Productivity"],
+      name: "DeepWork: Focus the Hours That Matter",
+      description: "A web app for deep focus organized by categories. Stay in flow by focusing on one category at a time—work, study, creative, or custom. React frontend with Java Spring Boot and Python in the backend. Built for sustained deep focus with clear category boundaries so you can go deep without context-switching.",
+      tech: ["React", "Java", "Spring Boot", "Python", "Web App"],
       link: "#",
       status: "live"
     },

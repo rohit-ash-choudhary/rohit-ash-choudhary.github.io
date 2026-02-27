@@ -37,18 +37,9 @@ function initTheme() {
   if (saved === 'light') {
     document.body.classList.add('light-mode');
     document.documentElement.classList.add('light-mode');
-  } else if (saved === 'dark') {
+  } else {
     document.body.classList.remove('light-mode');
     document.documentElement.classList.remove('light-mode');
-  } else {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.body.classList.add('light-mode');
-      document.documentElement.classList.add('light-mode');
-      localStorage.setItem('portfolio-theme', 'light');
-    } else {
-      document.body.classList.remove('light-mode');
-      document.documentElement.classList.remove('light-mode');
-    }
   }
 }
 
