@@ -7,20 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (typeof CONFIG !== 'undefined') {
     updatePageContent();
     setupHeroSocial();
-    // Setup random fact if on random-fact page
-    if (window.location.pathname.includes('random-fact.html')) {
-      setupRandomFact();
-    }
   } else {
     // If config hasn't loaded yet, wait a bit
     setTimeout(() => {
       if (typeof CONFIG !== 'undefined') {
         updatePageContent();
         setupHeroSocial();
-        // Setup random fact if on random-fact page
-        if (window.location.pathname.includes('random-fact.html')) {
-          setupRandomFact();
-        }
       }
     }, 100);
   }
@@ -91,42 +83,6 @@ function setupScrollAnimations() {
   sections.forEach(section => {
     observer.observe(section);
   });
-}
-
-function setupRandomFact() {
-  const factText = document.getElementById('fact-text');
-  const newFactBtn = document.getElementById('new-fact-btn');
-  
-  if (!factText || !newFactBtn || !CONFIG.randomFacts) return;
-
-  let currentFactIndex = -1;
-
-  function getRandomFact() {
-    let newIndex;
-    do {
-      newIndex = Math.floor(Math.random() * CONFIG.randomFacts.length);
-    } while (newIndex === currentFactIndex && CONFIG.randomFacts.length > 1);
-    
-    currentFactIndex = newIndex;
-    return CONFIG.randomFacts[currentFactIndex];
-  }
-
-  function displayFact() {
-    factText.style.opacity = '0';
-    factText.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-      factText.textContent = getRandomFact();
-      factText.style.opacity = '1';
-      factText.style.transform = 'translateY(0)';
-    }, 300);
-  }
-
-  // Initial fact
-  displayFact();
-
-  // Button click handler
-  newFactBtn.addEventListener('click', displayFact);
 }
 
 function setupSkills() {

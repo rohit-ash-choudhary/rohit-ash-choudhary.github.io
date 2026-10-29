@@ -2,86 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title id="page-title">Portfolio — Backend Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit Ash Choudhary — Backend Engineer</title>
+  <meta name="description" content="Rohit Ash Choudhary builds backend systems that scale, fail safely, and stay clean.">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <script>
-    (function() {
-      var s = localStorage.getItem('portfolio-theme');
-      if (s === 'light') document.documentElement.classList.add('light-mode');
-      else document.documentElement.classList.remove('light-mode');
-    })();
-  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="studio.css">
 </head>
-<body>
+<body class="reel">
+  <div class="aurora" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="mark" href="#hi" aria-label="Rohit Ash Choudhary, home">
+      <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true">
+        <circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3"/>
+        <circle cx="16" cy="16" r="2.2" fill="#c8956c"/>
+      </svg>
+      <span>RA</span>
+    </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
-  <span class="icon-moon" aria-hidden="true">🌙</span>
-  <span class="icon-sun" aria-hidden="true">☀️</span>
-</button>
+  <nav class="menu-panel" id="menu-panel" hidden>
+    <a href="#hi">01 · Hi</a>
+    <a href="#about">02 · About</a>
+    <a href="#work">03 · Work</a>
+    <a href="#skills">04 · Skills</a>
+    <a href="#contact">05 · Contact</a>
+    <a href="#resume">06 · Resume</a>
+  </nav>
 
-<section class="hero container">
-  <div class="hero-content">
-    <div class="hero-name" id="hero-name">
-      <span class="name-label">Hi, I'm</span>
-      <span class="name-value" id="name-display">
-        <span class="name-full">Rohit Ash Choudhary</span>
-        <span class="name-callout">(you can call me <span class="highlight">Rohit</span> or <span class="highlight">Ash</span>)</span>
-      </span>
-    </div>
-    <h1 id="hero-title">
-      I build <span class="highlight-text">backend systems</span><br>
-      that <span class="highlight-text">scale</span>,<br>
-      <span class="highlight-text">fail safely</span>,<br>
-      and stay <span class="highlight-text">clean</span>.
-    </h1>
-    <p class="sub" id="hero-subtitle">
-      Backend Engineer · Java · Spring Boot · Kafka · AWS · Oracle · AI · DevOps
-    </p>
-    <div class="bio-text" id="bio-text">
-      <p>I build products from scratch. Not just backend code, but full systems that people actually use. I think about what users need, design things that scale, and ship features that solve real problems. If it doesn't work when it matters, it's not good enough.</p>
-      <p>When I'm not building, I travel, listen to music, and write lyrics. Finding the right words feels a lot like debugging a tricky system. Both need patience and the right approach.</p>
-    </div>
-    <div class="hero-social" id="hero-social">
-      <!-- Social links loaded from config -->
-    </div>
-  </div>
-</section>
+  <nav class="spine" aria-label="Section index">
+    <a href="#hi" data-spy="hi"><span>01</span> Hi</a>
+    <a href="#about" data-spy="about"><span>02</span> About</a>
+    <a href="#work" data-spy="work"><span>03</span> Work</a>
+    <a href="#skills" data-spy="skills"><span>04</span> Skills</a>
+    <a href="#contact" data-spy="contact"><span>05</span> Contact</a>
+    <a href="#resume" data-spy="resume"><span>06</span> Resume</a>
+  </nav>
 
-<nav class="side-nav">
-  <a href="index.html" class="nav-link active">Home</a>
-  <a href="resume.html" class="nav-link">Resume</a>
-  <a href="products.html" class="nav-link">Things I've Built</a>
-  <a href="random-fact.html" class="nav-link">Random Fact</a>
-</nav>
+  <main>
+    <section class="hero" id="hi">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> SDE II · Core Platform at Helpshift</p>
+        <h1 aria-label="Rohit Ash Choudhary">
+          <span class="name-line" aria-hidden="true" id="name-rohit"></span>
+          <span class="name-line" aria-hidden="true" id="name-ash"></span>
+          <span class="name-line" aria-hidden="true" id="name-choudhary"></span>
+        </h1>
+        <p class="aka">call me <strong>Rohit</strong><span class="slash" aria-hidden="true"></span><strong class="ash">Ash</strong></p>
+        <p class="welcome">
+          Services that have to agree with each other: 20+ APIs, auth across 8 of them, and a message path carrying 50k events a day under 10ms on top of 100k daily transactions. Under that, the data: 12TB moving from ScyllaDB to Yugabyte across 18 nodes, dual writes and retries while the old cluster is still serving, and SLOs so the cutover finishes without taking the platform down.
+        </p>
+        <div class="hero-stats">
+          <div>
+            <strong>12TB+</strong>
+            <span>data migrated</span>
+          </div>
+          <div>
+            <strong>100k+</strong>
+            <span>txns / day</span>
+          </div>
+          <div>
+            <strong>&lt;10ms</strong>
+            <span>Kafka latency</span>
+          </div>
+          <div>
+            <strong>1,080+</strong>
+            <span>hours saved / yr</span>
+          </div>
+        </div>
+        <p class="hero-now">
+          <span>Helpshift · Amdocs · JK Tech</span>
+          <a href="#work">See the work →</a>
+        </p>
+      </div>
+      <div class="globe-wrap">
+        <canvas id="globe" width="520" height="520" aria-hidden="true"></canvas>
+        <span class="orbit" style="--a:-108deg"><span class="signal">12TB</span></span>
+        <span class="orbit" style="--a:-58deg"><span class="signal">Java</span></span>
+        <span class="orbit copper" style="--a:-8deg"><span class="signal">Kafka</span></span>
+        <span class="orbit" style="--a:46deg"><span class="signal">Spring Boot</span></span>
+        <span class="orbit" style="--a:100deg"><span class="signal">RAG</span></span>
+        <span class="orbit" style="--a:154deg"><span class="signal">Yugabyte</span></span>
+        <span class="orbit" style="--a:208deg"><span class="signal">Redis</span></span>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <path d="M12 4v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+      </a>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>12TB</span><span>Clojure</span><span>ScyllaDB</span><span>Yugabyte</span><span>Kafka</span><span>Spring Boot</span><span>Grafana</span><span>Prometheus</span><span>RAG</span><span>AWS</span><span>Redis</span>
+          <span>12TB</span><span>Clojure</span><span>ScyllaDB</span><span>Yugabyte</span><span>Kafka</span><span>Spring Boot</span><span>Grafana</span><span>Prometheus</span><span>RAG</span><span>AWS</span><span>Redis</span>
+        </div>
+      </div>
+    </section>
 
-<nav class="mobile-nav">
-  <a href="index.html" class="mobile-nav-link active">
-    <span class="mobile-nav-icon">🏠</span>
-    <span class="mobile-nav-text">Home</span>
-  </a>
-  <a href="resume.html" class="mobile-nav-link">
-    <span class="mobile-nav-icon">📄</span>
-    <span class="mobile-nav-text">Resume</span>
-  </a>
-  <a href="products.html" class="mobile-nav-link">
-    <span class="mobile-nav-icon">🔨</span>
-    <span class="mobile-nav-text">Built</span>
-  </a>
-  <a href="random-fact.html" class="mobile-nav-link">
-    <span class="mobile-nav-icon">✨</span>
-    <span class="mobile-nav-text">Fact</span>
-  </a>
-</nav>
+    <section class="about band" id="about">
+      <div class="about-grid">
+        <div class="reveal">
+          <p class="eyebrow">02 · About</p>
+          <p class="statement">If it fails when the traffic is real, it was never finished.</p>
+          <p class="body-copy" id="about-copy"></p>
+        </div>
+        <div class="timeline-col">
+          <ol class="journey" id="journey"></ol>
+        </div>
+      </div>
+    </section>
 
+    <section class="works band" id="work">
+      <div class="section-intro reveal">
+        <p class="eyebrow">03 · Selected works</p>
+        <h2>Things people actually use.</h2>
+      </div>
+      <div class="work-list" id="work-list"></div>
+      <div class="preview" id="work-preview" hidden></div>
+    </section>
 
-<script src="config.js"></script>
-<script src="script.js"></script>
+    <section class="skills band" id="skills">
+      <div class="section-intro reveal">
+        <p class="eyebrow">04 · Stack</p>
+        <h2>The tools I reach for.</h2>
+      </div>
+      <div class="bento" id="bento"></div>
+    </section>
+
+    <section class="quote-block band" id="note">
+      <blockquote class="reveal">
+        <span class="mark-quote" aria-hidden="true">“</span>
+        <p>I build products from scratch. Not just backend code, but full systems that people actually use.</p>
+        <footer>Rohit Ash Choudhary</footer>
+      </blockquote>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow">05 · Contact</p>
+        <h2>If the system has to hold, write.</h2>
+        <a class="cta" id="contact-mail" href="mailto:ashhh.choudhary@gmail.com">
+          <span>Start a conversation</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <div class="contact-links" id="contact-links"></div>
+      </div>
+    </section>
+
+    <section class="resume-band band" id="resume">
+      <div class="section-intro reveal">
+        <p class="eyebrow">06 · Resume</p>
+        <h2>The work, on one page.</h2>
+      </div>
+      <div class="resume-actions">
+        <a href="ROHITASH_CHOUDHARY_SDE2.pdf" download class="cta" id="resume-download-btn">
+          <span>Download PDF</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="#" class="linkedin-pill" id="experience-linkedin" target="_blank" rel="noopener noreferrer">Roles, dates, and the rest on LinkedIn <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="timeline" id="experience-timeline"></div>
+      <div class="skill-cloud" id="skills-section"></div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="studio.js"></script>
 </body>
 </html>
